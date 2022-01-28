@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// context
+import AppContext from "../context/AppContext";
+
 // css
 import "../styles/components/Header.css";
 
@@ -8,6 +11,9 @@ import "../styles/components/Header.css";
 import { BiShoppingBag } from "react-icons/bi";
 
 const Header = () => {
+  const { state } = useContext(AppContext);
+  const { cart } = state;
+
   return (
     <div className="Header">
       <h1 className="Header-title">
@@ -18,6 +24,7 @@ const Header = () => {
           <BiShoppingBag />
         </Link>
       </div>
+      {cart.length > 0 && <div className="Header-alert">{cart.length}</div>}
     </div>
   );
 };
