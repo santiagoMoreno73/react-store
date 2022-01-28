@@ -1,7 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // css
 import "../styles/components/Checkout.css";
+
+//react-icons
+import { AiOutlineDelete } from "react-icons/ai";
 
 const Checkout = () => {
   return (
@@ -13,12 +17,16 @@ const Checkout = () => {
             <h4>Item name</h4>
             <span>$18</span>
           </div>
-          <button type="button">Eliminar</button>
+          <button type="button">
+            <AiOutlineDelete />
+          </button>
         </div>
       </div>
       <div className="Checkout-sidebar">
         <h3>Precio Total: $10</h3>
-        <button type="button">Continuar pedido</button>
+        <Link to="/checkout/information">
+          <button type="button">Continuar pedido</button>
+        </Link>
       </div>
     </div>
   );
