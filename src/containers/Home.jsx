@@ -9,7 +9,7 @@ import initialState from "../initialState";
 const Home = () => {
   return (
     <div>
-      <Products products={initialState.products} />
+      <Products />
     </div>
   );
 };

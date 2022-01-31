@@ -14,7 +14,12 @@ const Products = () => {
   const { products } = state;
 
   const handleAddToCart = (product) => () => {
-    addToCart(product);
+    const idRandom = Math.floor(Math.random() * 1000);
+    const newProduct = {
+      ...product,
+      cartId: `${product.id} - ${idRandom}`,
+    };
+    addToCart(newProduct);
   };
 
   return (
