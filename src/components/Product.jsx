@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
+
+// context
+import AppContext from "../context/AppContext";
 
 const Product = ({ product, handleAddToCart }) => {
   return (

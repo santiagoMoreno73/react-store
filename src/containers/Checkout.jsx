@@ -1,11 +1,14 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
-// css
-import "../styles/components/Checkout.css";
-
 // context
 import AppContext from "../context/AppContext";
+
+// misc
+import { handleSumTotal } from "../utils/misc";
+
+// css
+import "../styles/components/Checkout.css";
 
 //react-icons
 import { AiOutlineDelete } from "react-icons/ai";
@@ -16,13 +19,6 @@ const Checkout = () => {
 
   const handleRemove = (product) => () => {
     removeFromCart(product);
-  };
-
-  const handleSumTotal = () => {
-    const reducer = (accumulator, currentValue) =>
-      accumulator + currentValue.price;
-    const sum = cart.reduce(reducer, 0);
-    return sum;
   };
 
   return (
@@ -43,7 +39,7 @@ const Checkout = () => {
       </div>
       {cart.length > 0 && (
         <div className="Checkout-sidebar">
-          <h3>{`Precio Total: $ ${handleSumTotal()}`}</h3>
+          <h3>{`Precio Total: $ ${handleSumTotal(cart)}`}</h3>
           <Link to="/checkout/information">
             <button type="button">Continuar pedido</button>
           </Link>
