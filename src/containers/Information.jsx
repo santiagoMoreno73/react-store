@@ -34,7 +34,7 @@ const Information = () => {
     <div className="Information">
       <div className="Information-content">
         <div className="Information-head">
-          <h2>Informacion de Contacto</h2>
+          <h2>Información de Contacto</h2>
         </div>
         <div className="Information-form">
           <form ref={form}>
