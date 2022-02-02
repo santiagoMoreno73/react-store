@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
+import axios from "axios";
 // button paypal
 import { PayPalButton } from "react-paypal-button-v2";
 
@@ -19,8 +19,7 @@ const Payment = () => {
   const navigate = useNavigate();
 
   const paypalOptions = {
-    clientId:
-      "AYzDxfz_fDE32J4vIm-NzWUiZHnWhO88krYPEpnng3V9AsKIyUb6vxPTiYGke2Qn_XROTvQFvtkeE-ke",
+    clientId: process.env.REACT_APP_CLIENT_ID,
     intent: "capture",
     currency: "USD",
   };
@@ -35,6 +34,8 @@ const Payment = () => {
       };
       addNewOrder(newOrder);
       navigate("/checkout/success");
+    } else if (data.orderID) {
+      console.log("Has cancelado la transacción");
     }
   };
 
@@ -55,10 +56,10 @@ const Payment = () => {
             paypalOptions={paypalOptions}
             buttonStyles={buttonStyles}
             amount={handleSumTotal(cart)}
-            onSuccess={() => console.log("Start Payment")}
-            onPaymentSuccess={(data) => handlePaymentSuccess(data)}
+            onPaymentStart={() => console.log("Start Payment")}
+            onSuccess={(data) => handlePaymentSuccess(data)}
             onError={(error) => console.log(error)}
-            onCancel={(data) => console.log(data)}
+            onCancel={(data) => handlePaymentSuccess(data)}
           />
         </div>
       </div>
