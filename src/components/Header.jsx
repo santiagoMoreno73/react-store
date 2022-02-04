@@ -19,12 +19,16 @@ const Header = () => {
       <h1 className="Header-title">
         <Link to="/">Store</Link>
       </h1>
-      <div className="Header-checkout">
-        <Link to="/checkout">
-          <BiShoppingBag />
-        </Link>
+      <div className="Header-content">
+        <div className="Header-checkout">
+          <Link to="/checkout">
+            <BiShoppingBag size={25} />
+          </Link>
+        </div>
+        <div className="Header-alert-content">
+          {cart.length > 0 && <div className="Header-alert">{cart.length}</div>}
+        </div>
       </div>
-      {cart.length > 0 && <div className="Header-alert">{cart.length}</div>}
     </div>
   );
 };

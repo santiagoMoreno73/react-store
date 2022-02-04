@@ -17,6 +17,7 @@
   cursor: pointer;
 }
 .Checkout-item button {
+  cursor: pointer;
   background-color: transparent;
   border: none;
   outline: none;
@@ -50,6 +51,10 @@
   width: 100%;
   display: block;
   outline: none;
+}
+
+.Checkout-sidebar button:hover {
+  background: #a1d0f3;
 }
 
 a {

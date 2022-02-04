@@ -22,7 +22,6 @@ const Products = () => {
       ...product,
       cartId: idRandom,
     };
-    console.log(newProduct);
     addToCart(newProduct);
   };
 

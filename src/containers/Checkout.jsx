@@ -32,7 +32,7 @@ const Checkout = () => {
               <span>${item.price}</span>
             </div>
             <button type="button" onClick={handleRemove(item.cartId)}>
-              <AiOutlineDelete />
+              <AiOutlineDelete size={22} />
             </button>
           </div>
         ))}

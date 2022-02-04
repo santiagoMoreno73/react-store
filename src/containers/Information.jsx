@@ -4,6 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 //context
 import AppContext from "../context/AppContext";
 
+// misc
+import { handleSumTotal } from "../utils/misc";
+
 // css
 import "../styles/components/Information.css";
 
@@ -68,6 +71,7 @@ const Information = () => {
             </div>
           </div>
         ))}
+        <h4>{`Precio Total: $ ${handleSumTotal(cart)}`}</h4>
       </div>
     </div>
   );
