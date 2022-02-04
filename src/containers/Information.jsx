@@ -61,7 +61,7 @@ const Information = () => {
       <div className="Information-sidebar">
         <h3>Pedido:</h3>
         {cart.map((item) => (
-          <div className="Information-item" key={item.title}>
+          <div className="Information-item" key={item.cartId}>
             <div className="Information-element">
               <h4>{item.title}</h4>
               <span>{item.price}</span>

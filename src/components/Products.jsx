@@ -6,6 +6,9 @@ import Product from "./Product";
 //context
 import AppContext from "../context/AppContext";
 
+//misc
+import { handleRandomKey } from "../utils/misc";
+
 // css
 import "../styles/components/Products.css";
 
@@ -17,8 +20,9 @@ const Products = () => {
     const idRandom = Math.floor(Math.random() * 1000);
     const newProduct = {
       ...product,
-      cartId: `${product.id} - ${idRandom}`,
+      cartId: idRandom,
     };
+    console.log(newProduct);
     addToCart(newProduct);
   };
 
@@ -27,7 +31,7 @@ const Products = () => {
       <div className="Products-items">
         {products.map((product) => (
           <Product
-            key={product.id}
+            key={handleRandomKey(product.id)}
             product={product}
             handleAddToCart={handleAddToCart}
           />

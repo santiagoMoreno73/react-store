@@ -7,7 +7,6 @@ import "leaflet/dist/leaflet.css";
 import Loader from "../components/Shared/Loader";
 
 const Map = ({ data, load }) => {
-  console.log(data);
   const position = [data.latitude, data.longitude];
 
   return (

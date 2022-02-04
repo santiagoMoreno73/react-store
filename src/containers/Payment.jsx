@@ -25,7 +25,6 @@ const Payment = () => {
   };
 
   const handlePaymentSuccess = (data) => {
-    console.log(data);
     if (data.status === "COMPLETED") {
       const newOrder = {
         buyer,
@@ -44,7 +43,7 @@ const Payment = () => {
       <div className="Payment-content">
         <h3>Resumen del pedido:</h3>
         {cart.map((item) => (
-          <div className="Payment-item" key={item.title}>
+          <div className="Payment-item" key={item.cartId}>
             <div className="Payment-element">
               <h4>{item.title}</h4>
               <span>${item.price}</span>
