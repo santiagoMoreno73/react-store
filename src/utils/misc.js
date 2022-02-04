@@ -9,3 +9,8 @@ export const buttonStyles = {
   layout: "vertical",
   shape: "rect",
 };
+
+export const handleRandomKey = (keys) => {
+  const randomKey = Math.random() * keys;
+  return randomKey;
+};
