@@ -52,14 +52,6 @@ const Information = () => {
             <input type="text" placeholder="Teléfono" name="phone" />
           </form>
         </div>
-        <div className="Information-buttons">
-          <div className="Information-back">
-            <Link to="/checkout">Regresar</Link>
-          </div>
-          <div className="Information-next">
-            <button onClick={handleSubmit}>Pagar</button>
-          </div>
-        </div>
       </div>
       <div className="Information-sidebar">
         <h3>Pedido:</h3>
@@ -72,6 +64,14 @@ const Information = () => {
           </div>
         ))}
         <h4>{`Precio Total: $ ${handleSumTotal(cart)}`}</h4>
+      </div>
+      <div className="Information-buttons">
+        <div className="Information-back">
+          <Link to="/checkout">Regresar</Link>
+        </div>
+        <div className="Information-next">
+          <button onClick={handleSubmit}>Pagar</button>
+        </div>
       </div>
     </div>
   );
