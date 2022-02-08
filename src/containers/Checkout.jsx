@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import AppContext from "../context/AppContext";
 
 // misc
-import { handleSumTotal } from "../utils/misc";
+import { handleSumTotal, handleRandomKey } from "../utils/misc";
 
 // css
 import "../styles/components/Checkout.css";
@@ -26,7 +26,7 @@ const Checkout = () => {
       <div className="Checkout-content">
         {cart.length > 0 ? <h3>Lista de Pedidos:</h3> : <h3>Sin pedidos</h3>}
         {cart.map((item) => (
-          <div className="Checkout-item" key={item.cartId}>
+          <div className="Checkout-item" key={handleRandomKey(item.cartId)}>
             <div className="Checkout-element">
               <h4>{item.title}</h4>
               <span>${item.price}</span>
