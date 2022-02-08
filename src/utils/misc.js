@@ -1,3 +1,7 @@
+// regular expressions
+export const regularExpNotNumbers = /^[A-Z]+$/i;
+export const regularExpNotLetters = /^[0-9]+$/;
+
 export const handleSumTotal = (cart) => {
   const reducer = (accumulator, currentValue) =>
     accumulator + currentValue.price;
