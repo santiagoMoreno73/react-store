@@ -14,7 +14,7 @@
 }
 .Payment-item .fas {
   margin: 0 0 0 10px;
-  color: rgba(0,0,0,0.4);
+  color: rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
 .Payment-item button {
@@ -31,4 +31,16 @@
 }
 .Payment-element h4 {
   margin: 0;
+}
+
+@media (min-width: 280px) and (max-width: 720px) {
+  .Payment {
+    display: inline-block;
+  }
+  .Payment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 }

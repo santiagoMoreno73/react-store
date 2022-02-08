@@ -2,3 +2,9 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media (min-width: 280px) and (max-width: 720px) {
+  .Footer {
+    display: inline-block;
+  }
+}

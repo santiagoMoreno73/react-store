@@ -60,3 +60,9 @@
 a {
   text-decoration: none;
 }
+
+@media (min-width: 280px) and (max-width: 720px) {
+  .Checkout {
+    display: inline-block;
+  }
+}

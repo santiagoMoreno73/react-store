@@ -28,3 +28,10 @@
   text-decoration: none;
   color: #33b1ff;
 }
+
+@media (min-width: 280px) and (max-width: 720px) {
+  .Header {
+    display: flex;
+    justify-content: space-around;
+  }
+}

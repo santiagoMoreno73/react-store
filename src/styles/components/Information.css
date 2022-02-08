@@ -94,3 +94,12 @@ input {
 .Information button:hover {
   background: #a1d0f3;
 }
+
+@media (min-width: 280px) and (max-width: 720px) {
+  .Information {
+    display: inline-block;
+  }
+  .Information-sidebar {
+    margin: 20px 0 0 0;
+  }
+}
