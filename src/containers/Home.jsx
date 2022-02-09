@@ -1,5 +1,8 @@
 import React from "react";
 
+//seo
+import { Helmet } from "react-helmet";
+
 // components
 import Products from "../components/Products";
 
@@ -8,9 +11,12 @@ import initialState from "../initialState";
 
 const Home = () => {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>React Store Conf</title>
+      </Helmet>
       <Products />
-    </div>
+    </>
   );
 };
 
